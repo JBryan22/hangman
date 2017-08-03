@@ -1,0 +1,75 @@
+<h1>Welcome to Hangman!</h1>
+
+<p>@Model.CheckWrong()</p>
+
+<form action="/" method="post">
+  <label for="guess">Enter a letter</label>
+  <input type="text" id="guess" name="guess">
+</form>
+
+
+<p>@foreach (var letter in @Model.GetWordList())
+  {
+    if (@Model.GetRightGuesses().Contains(@letter))
+    {
+      <span>@letter</span>
+    }
+    else
+    {
+      <span>_</span>
+    }
+  }
+</p>
+
+<br>
+
+<p>@foreach (var letter in @Model.GetWrongGuesses())
+  {
+    <span>@letter </span>
+  }
+</p>
+
+
+@* <p>    ________________      </p>
+<p>    |               |     </p>
+<p>                    |     </p>
+<p>                    |     </p>
+<p>                    |     </p>
+<p>                    |     </p>
+<p>                    |     </p>
+<p>                    |     </p>
+<p>                    |     </p>
+<p>               _____|_____</p>
+
+<p>    ________________      </p>
+<p>   /\               |     </p>
+<p>   \/               |     </p>
+<p>                    |     </p>
+<p>                    |     </p>
+<p>                    |     </p>
+<p>                    |     </p>
+<p>                    |     </p>
+<p>                    |     </p>
+<p>               _____|_____</p>
+
+<p>    ________________      </p>
+<p>   /\               |     </p>
+<p>   \/               |     </p>
+<p>   /\               |     </p>
+<p>  |  |              |     </p>
+<p>   \/               |     </p>
+<p>                    |     </p>
+<p>                    |     </p>
+<p>                    |     </p>
+<p>               _____|_____</p>
+
+<p>    ________________      </p>
+<p>    /\              |     </p>
+<p>    \/              |     </p>
+<p>    /\              |     </p>
+<p>   |  |             |     </p>
+<p>    \/              |     </p>
+<p>                    |     </p>
+<p>                    |     </p>
+<p>                    |     </p>
+<p>               _____|_____</p> *@

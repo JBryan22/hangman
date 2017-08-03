@@ -1,0 +1,4 @@
+/Users/Guest/Desktop/hangman/bin/Debug/netcoreapp1.1/Hangman.deps.json
+/Users/Guest/Desktop/hangman/bin/Debug/netcoreapp1.1/Hangman.runtimeconfig.json
+/Users/Guest/Desktop/hangman/bin/Debug/netcoreapp1.1/Hangman.runtimeconfig.dev.json
+/Users/Guest/Desktop/hangman/obj/Debug/netcoreapp1.1/Hangman.AssemblyInfo.cs
