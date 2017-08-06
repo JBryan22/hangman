@@ -8,7 +8,7 @@
 </form>
 
 
-<p>@foreach (var letter in @Model.GetWordList())
+<p>@foreach (var letter in @Model.GetWord())
   {
     if (@Model.GetRightGuesses().Contains(@letter))
     {

@@ -6,67 +6,74 @@ namespace Hangman.Models
   public class Board
   {
     private string _word;
-    private char[] _wordList;
-    private List<string> _alphabet;
+    private List<char> _alphabet;
     private List<string> _words;
 
-    private static List<string> _wrongGuessInstances = new List<string> {};
-    private static List<string> _rightGuessInstances = new List<string> {};
+    private static List<Board> _instances = new List<Board>{};
+
+    private List<char> _wrongGuessInstances;
+    private List<char> _rightGuessInstances;
 
     public Board()
     {
-      _alphabet = new List<string> {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"};
+      _alphabet = new List<char> {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
       _words = new List<string>{"battleship","epicodus","nalgene", "jellyfish", "macintosh", "electrolytes", "exception", "alaska", "steelhead", "developer"};
       Random rnd = new Random();
+      _instances.Add(this);
       _word = _words[rnd.Next(0, _words.Count - 1)];
-      _wordList = _word.ToCharArray();
+      _wrongGuessInstances = new List<char> {};
+      _rightGuessInstances = new List<char> {};
     }
 
-    public static bool CheckValidGuess(string guess)
+    public bool CheckValidGuess(string guess)
     {
-      if (_alphabet.Contains(guess))
+      if (_alphabet.Contains(guess[0]))
       {
         return true;
       }
       return false;
     }
 
-    public static bool CheckGuess(string guess)
+    public bool CheckGuess(string guess)
     {
       if (_word.Contains(guess))
       {
-        _rightGuessInstances.Add(guess);
-        _alphabet.RemoveAt(_alphabet.IndexOf(guess));
+        _rightGuessInstances.Add(guess[0]);
+        _alphabet.RemoveAt(_alphabet.IndexOf(guess[0]));
         return true;
       }
       else
       {
-        _wrongGuessInstances.Add(guess);
-        _alphabet.RemoveAt(_alphabet.IndexOf(guess));
+        _wrongGuessInstances.Add(guess[0]);
+        _alphabet.RemoveAt(_alphabet.IndexOf(guess[0]));
         return false;
       }
     }
 
-    public static int CheckWrong()
+    public int CheckWrong()
     {
       return _wrongGuessInstances.Count;
     }
 
-    public static string[] GetWordList()
+    public string GetWord()
     {
-      return _wordList;
+      return _word;
     }
 
-    public static List<string> GetRightGuesses()
+    public List<char> GetRightGuesses()
     {
       return _rightGuessInstances;
     }
 
-    public static List<string> GetWrongGuesses()
+    public List<char> GetWrongGuesses()
     {
       return _wrongGuessInstances;
     }
 
+    public static Board GetBoard()
+    {
+      return _instances[0];
+    }
 
   }
 }

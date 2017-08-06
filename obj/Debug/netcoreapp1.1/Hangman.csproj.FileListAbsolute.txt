@@ -2,3 +2,11 @@
 /Users/Guest/Desktop/hangman/bin/Debug/netcoreapp1.1/Hangman.runtimeconfig.json
 /Users/Guest/Desktop/hangman/bin/Debug/netcoreapp1.1/Hangman.runtimeconfig.dev.json
 /Users/Guest/Desktop/hangman/obj/Debug/netcoreapp1.1/Hangman.AssemblyInfo.cs
+C:\Users\Jesse\Desktop\CSharp Epicodus\hangman\bin\Debug\netcoreapp1.1\Hangman.deps.json
+C:\Users\Jesse\Desktop\CSharp Epicodus\hangman\bin\Debug\netcoreapp1.1\Hangman.runtimeconfig.json
+C:\Users\Jesse\Desktop\CSharp Epicodus\hangman\bin\Debug\netcoreapp1.1\Hangman.runtimeconfig.dev.json
+C:\Users\Jesse\Desktop\CSharp Epicodus\hangman\obj\Debug\netcoreapp1.1\Hangman.AssemblyInfo.cs
+C:\Users\Jesse\Desktop\CSharp Epicodus\hangman\bin\Debug\netcoreapp1.1\Hangman.dll
+C:\Users\Jesse\Desktop\CSharp Epicodus\hangman\bin\Debug\netcoreapp1.1\Hangman.pdb
+C:\Users\Jesse\Desktop\CSharp Epicodus\hangman\obj\Debug\netcoreapp1.1\Hangman.dll
+C:\Users\Jesse\Desktop\CSharp Epicodus\hangman\obj\Debug\netcoreapp1.1\Hangman.pdb

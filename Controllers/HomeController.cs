@@ -10,21 +10,22 @@ namespace Hangman.Controllers
     [HttpGet("/")]
     public ActionResult Index()
     {
-      return View();
+      Board newBoard = new Board();
+      return View(newBoard);
     }
 
     [HttpPost("/")]
     public ActionResult IndexGuess()
     {
       string newGuess = Request.Form["guess"];
-      if (Board.CheckValidGuess(newGuess))
+      if (Board.GetBoard().CheckValidGuess(newGuess))
       {
-        Board.CheckGuess(newGuess);
-        return View("/");
+        Board.GetBoard().CheckGuess(newGuess);
+        return View("index", Board.GetBoard());
       }
       else
       {
-        return View();
+        return View("index", Board.GetBoard());
       }
     }
   }
